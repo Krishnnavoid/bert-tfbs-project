@@ -229,24 +229,6 @@ python -u train_baseline.py --arch danq --tag danq --seed 41 --epochs 10
 
 ---
 
-## 9. Status and next steps
-
-| Item | Status |
-|---|---|
-| Docker environment, fixed training / evaluation scripts, full metrics | Done |
-| Reproduction: full, v1, v2 on HepG2 FOSL2 (seed 41) | Done, equal epochs and more seeds pending |
-| ResNet-1D variant | Done on FOSL2 and synthetic data, one seed |
-| Synthetic planted-motif study | One configuration done (FOSL2, rate 0.1, shuffled negatives) |
-| Cross-cell-line study (K562 ↔ A549 CTCF) | Done, K562 model needs the full 15 epochs |
-| DanQ baseline | Trained on FOSL2, AUC values need recomputing |
-| DeepBind-style baseline | Not started |
-| Synthetic variants (other mutation rates, background negatives, CTCF motif) | Not started |
-| HepG2 CTCF results | Dataset added, no results yet |
-| Three seeds per model | Not started |
-| Harder negatives (negatives from other TFs' peaks) | Not started |
-
----
-
 ## 10. Team
 
 Contributors in the git history: **Krishnnavoid**, **Krish (Krish3779)** and **Anshu Sharma (ANSHUSHARMA312)**.
