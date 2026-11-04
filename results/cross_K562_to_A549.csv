@@ -1,0 +1,2 @@
+train_cell_line,test_cell_line,arch,weights,loss,acc,precision,recall,specificity,f1,mcc,roc_auc,pr_auc,tn,fp,fn,tp
+wgEncodeAwgTfbsBroadK562CtcfUniPk,wgEncodeAwgTfbsHaibA549Ctcfsc,full,model_full_seed41_Broad_K562.pth,0.36315979058859127,0.9501132398849238,0.9925955308739918,0.9081780788773288,0.9930615784908933,0.9485122243982563,0.9036615476221438,0.9375796280308415,0.9594006902396967,8015,56,759,7507
