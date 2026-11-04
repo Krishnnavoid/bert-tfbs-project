@@ -58,17 +58,19 @@ if __name__ == '__main__':
     ap.add_argument('--epochs', type=int, default=15)
     ap.add_argument('--tag', default='full', help='name of this model variant (used in output files)')
     ap.add_argument('--arch', default='full', choices=['full', 'v1', 'v2', 'resnet'])
+    ap.add_argument('--dataset', default=None, help='run only this specific dataset subfolder')
     args = ap.parse_args()
     ARCH = {'full': 'script.model', 'v1': 'script.model_V1', 'v2': 'script.model_V2', 'resnet': 'script.model_resnet'}
     Bert_Blend_CNN = importlib.import_module(ARCH[args.arch]).Bert_Blend_CNN
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     epoches = args.epochs
-    dataset_folder = 'Dataset'
+    dataset_folder = os.environ.get('DATASET_FOLDER', 'Dataset')
     os.makedirs('results', exist_ok=True)
     log_path = os.path.join('results', f'metrics_{args.tag}_seed{args.seed}.csv')
 
-    for folder_name in os.listdir(dataset_folder):
+    folders = [args.dataset] if args.dataset else sorted(os.listdir(dataset_folder))
+    for folder_name in folders:
         folder_path = os.path.join(dataset_folder, folder_name)
         if not os.path.isdir(folder_path):
             continue

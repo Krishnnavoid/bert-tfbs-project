@@ -44,16 +44,17 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--arch', default='full', choices=list(ARCH), help='model variant')
     ap.add_argument('--weights', default='model.pth', help='weights file name inside each Dataset/<folder>/')
+    ap.add_argument('--dataset', default=None, help='run only this specific dataset subfolder')
     ap.add_argument('--out', default='results/test_metrics.csv', help='where to save the results table')
     args = ap.parse_args()
 
     Bert_Blend_CNN = importlib.import_module(ARCH[args.arch]).Bert_Blend_CNN
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    dataset_folder = 'Dataset'
+    dataset_folder = os.environ.get('DATASET_FOLDER', 'Dataset')
     loss_fn = nn.CrossEntropyLoss()
     rows = []
 
-    folders = sorted(f for f in os.listdir(dataset_folder) if os.path.isdir(os.path.join(dataset_folder, f)))
+    folders = [args.dataset] if args.dataset else sorted(f for f in os.listdir(dataset_folder) if os.path.isdir(os.path.join(dataset_folder, f)))
     with torch.no_grad():
         for folder_name in folders:
             folder_path = os.path.join(dataset_folder, folder_name)
