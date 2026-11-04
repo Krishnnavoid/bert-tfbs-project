@@ -72,7 +72,6 @@ Predicting transcription factor binding sites (TFBSs) from DNA sequence with a D
 | `Dataset/wgEncodeAwgTfbsHaibHepg2Fosl2V0416101UniPk` | HepG2 FOSL2 (original authors' data, archived in `original_Dataset.zip`) | 101 bp | 39,439 / 9,920 | reproduction, ResNet, DanQ, ablations |
 | `Dataset/wgEncodeAwgTfbsBroadK562CtcfUniPk` | K562 CTCF (Broad), built with `generate_dataset.py` | 200 bp | 83,187 / 20,797 | cross-cell study |
 | `Dataset/wgEncodeAwgTfbsHaibA549Ctcfsc` | A549 CTCF (HAIB), built with `generate_dataset.py` | 200 bp | 65,345 / 16,337 | cross-cell study |
-| `Dataset/wgEncodeAwgTfbsBroadHepg2CtcfUniPk` | HepG2 CTCF (Broad), built with `generate_dataset.py` | 200 bp | 74,316 / 18,580 | added, no results yet |
 | `synth/FOSL2_r0.1_matched` | synthetic, see Section 5.2 | 101 bp | 39,440 / 9,920 | synthetic study |
 
 ### Notes on the data
@@ -96,7 +95,7 @@ All runs use seed 41 only. Epoch counts differ between runs (see the tables).
 | **BERT-TFBS-ResNet** (ours) | 10 | 0.8859 | 0.9457 | 0.9494 | 0.8829 | 0.7720 |
 | **DanQ** (one-hot CNN + BiLSTM) | 10 | 0.8310 | not valid* | not valid* | 0.8242 | 0.6628 |
 
-*\* The DanQ model outputs logits, while `MetricTracker` expects class probabilities, so its ROC-AUC and PR-AUC in `results/test_danq_seed41.csv` are incorrect. Accuracy, F1 and MCC are not affected. These two numbers will be recomputed.*
+*\* The DanQ model outputs logits, while `MetricTracker` expects class probabilities, so its ROC-AUC and PR-AUC in `results/test_danq_seed41.csv` are incorrect. Accuracy, F1 and MCC are not affected.*
 
 > *For context, the paper reports averages over 165 datasets of accuracy / ROC-AUC / PR-AUC: full 0.851 / 0.919 / 0.920; v2 0.844 / 0.906 / 0.904; v1 0.838 / 0.887 / 0.872. These are averages over many datasets and are not comparable with a single dataset.*
 
