@@ -1,0 +1,2 @@
+dataset,tag,seed,test_loss,test_acc,test_precision,test_recall,test_specificity,test_f1,test_mcc,test_roc_auc,test_pr_auc,test_tn,test_fp,test_fn,test_tp
+wgEncodeAwgTfbsHaibHepg2Fosl2V0416101UniPk,danq,41,0.5351345413514683,0.8310483870967742,0.847863616745792,0.8018367346938775,0.8595617529880478,0.8242080973358507,0.6627832159729222,0.1638388080331734,0.332041850259766,4315,705,971,3929
