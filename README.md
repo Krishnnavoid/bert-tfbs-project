@@ -252,11 +252,11 @@ python -u train_baseline.py --arch danq --tag danq --seed 41 --epochs 10
 
 Contributors in the git history: **Krishnnavoid**, **Krish (Krish3779)** and **Anshu Sharma (ANSHUSHARMA312)**.
 
-| Member | Role |
-|---|---|
-| **Krishna Yadav** | Reproduction and environment |
-| **Krish Agrawal** | Synthetic data and benchmarks |
-| **Anshu Sharma** | Novelty and evaluation |
+| Member |
+|---|
+| **Krishna Yadav** |
+| **Krish Agrawal** |
+| **Anshu Sharma** |
 
 ---
 
