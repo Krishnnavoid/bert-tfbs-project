@@ -229,7 +229,7 @@ python -u train_baseline.py --arch danq --tag danq --seed 41 --epochs 10
 
 ---
 
-## 10. Team
+## 9. Team
 
 Contributors in the git history: **Krishnnavoid**, **Krish (Krish3779)** and **Anshu Sharma (ANSHUSHARMA312)**.
 
@@ -241,7 +241,7 @@ Contributors in the git history: **Krishnnavoid**, **Krish (Krish3779)** and **A
 
 ---
 
-## 11. References
+## 10. References
 
 1. Zeng et al. *BERT-TFBS: a novel BERT-based model for predicting transcription factor binding sites by transfer learning.* Briefings in Bioinformatics 25(3), bbae195, 2024. [https://academic.oup.com/bib/article/25/3/bbae195/7663431](https://academic.oup.com/bib/article/25/3/bbae195/7663431)
 2. Zhou et al. *DNABERT-2: Efficient Foundation Model and Benchmark for Multi-Species Genome.* [https://arxiv.org/abs/2306.15006](https://arxiv.org/abs/2306.15006). Model: [https://huggingface.co/zhihan1996/DNABERT-2-117M](https://huggingface.co/zhihan1996/DNABERT-2-117M)
