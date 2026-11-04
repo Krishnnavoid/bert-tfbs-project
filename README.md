@@ -1,6 +1,6 @@
 # BERT-TFBS Reproduction and Extensions
 
-**CHE 629 course project (group of three)**
+**CHE 629 course project **
 
 Predicting transcription factor binding sites (TFBSs) from DNA sequence with a DNABERT-2 + CNN + CBAM model. We reproduce the published BERT-TFBS model and its ablations, fix gaps in the original evaluation code, and extend it with:
 1. A **ResNet-1D** front end
